@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Flo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRON FOOD</title>
+
+    <style>
+        
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 400px; 
+            overflow: hidden;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slider img:not(:first-child) {
+            opacity: 0;
+        }
+
+        
+        .slider-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        
+        .container {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hello">
+            <h1>IRON FOOD</h1>
+        </div>
+
+       
+        <div class="slider">
+            <div class="slider-container">
+                <img src="download (6).jfif" alt="food-hd-wallpapers">   
+                <img src="test1.jfif" alt="Chicken Biryani">
+                <img src="OIP (2).jfif" alt="Porotta">
+                <img src="th (1).jfif" alt="Butter Chicken">
+            </div>
+        </div>
+
+        <div>
+            <div class="hi">
+                <h2>OUR MISSION</h2>
+            </div>
+            <p>To provide our customers with the highest quality food products at the most competitive prices, while delivering exceptional customer service and support</p>
+            <ul>
+                <li><b>Qual</b> We are committed to providing our customers with the highest quality food products. We source our products from reputable suppliers and we have rigorous quality control standards in place</li>
+                <li><b>Price</b>: We are committed to providing our customers with the most competitive prices. We work closely with our suppliers to negotiate the best possible prices for our customers</li>
+                <li><b>Customer Service</b>: We are committed to providing our customers with exceptional customer service. We have a team of experienced and knowledgeable staff who are always available to assist our customers</li>
+                <li><b>Support</b>: We are committed to providing our customers with the support they need to succeed. We offer a variety of services and resources to help our customers grow their businesses</li>
+            </ul>
+        </div>
+
+        <div class="hu">
+            <h3><b>OUR FOOD PRODUCTS</b></h3>
+        </div>
+
+        <section class="sec1">
+            <div class="card">
+                <img src="OIP (1).jfif" class="card-img-top" alt="Chicken Biryani">
+                <div class="card-body">
+                    <h5 class="card-title"><b>CHICKEN BIRIYANI</b></h5>
+                    <p class="card-text">Biryani, according to several historians, is believed to have originated in Persia and was brought to India by the Mughals. Biryani was further refined in the royal kitchens of the Mughal Empire</p>
+                    <a href="#" class="btn btn-primary">ORDER</a>
+                </div>  
+            <BR>
+
+            <div class="card">
+                <img src="OIP (2).jfif" class="card-img-top" alt="Porotta">
+                <div class="card-body">
+                    <h5 class="card-title"><b>POROTTA</b></h5>
+                    <p class="card-text">Parotta or porotta (Malayalam: പൊറോട്ട), (Tamil: பரோட்டா) is a layered South Asian flatbread made from refined flour, eggs, and oil.</p>  
+                    <a href="#" class="btn btn-primary">ORDER</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="th (1).jfif" class="card-img-top" alt="Butter Chicken">
+                <div class="card-body">
+                    <h5 class="card-title"><b>BUTTER CHICKEN</b></h5>
+                    <p class="card-text">The marinated chicken is cooked in a tandoor (traditional clay oven), but may be grilled, oven-roasted, or pan-fried. It is served in a mild curry sauce that includes butter...</p>
+                    <a href="#" class="btn btn-primary">ORDER</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="hii">
+            <p><strong>ABOUT US</strong></p>
+            <div>
+                <p><b>IRON FOOD</b>, where every bite tells a story...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slider img");
+
+        function changeSlide() {
+            // Hide the current slide
+            slides[currentSlide].style.opacity = 0;
+            
+            // Move to the next slide
+            currentSlide = (currentSlide + 1) % slides.length;
+            
+            // Show the next slide
+            slides[currentSlide].style.opacity = 1;
+        }
+
+        // Change slides every 3 seconds
+        setInterval(changeSlide, 3000);
+    </script>
+</body>
+</html>
